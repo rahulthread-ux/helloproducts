@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
       card.appendChild(groupEl);
     });
 
-var link = document.createElement('span');
-link.className = 'enquire-link';
-link.textContent = 'View details';
-card.appendChild(link);
+    var link = document.createElement('span');
+    link.className = 'enquire-link';
+    link.textContent = 'View details';
+    card.appendChild(link);
 
     grid.appendChild(card);
   });

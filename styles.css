@@ -580,6 +580,35 @@ section{padding:64px 0;}
 }
 .benefit-list li:last-child{border-bottom:none;}
 
+.bulk-heading{
+  font-size:1.3rem;
+  margin-top:20px;
+  margin-bottom:8px;
+}
+.detail-faq{
+  max-width:760px;
+  margin-top:16px;
+  padding-bottom:24px;
+}
+.detail-faq h3{
+  font-size:1.2rem;
+  margin-bottom:16px;
+}
+.faq-item{
+  border-bottom:1px solid var(--line);
+  padding:16px 0;
+}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{
+  font-weight:600;
+  margin-bottom:6px;
+}
+.faq-a{
+  color:var(--ink-soft);
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
 /* Homepage product shelf (horizontal scroll) */
 .shelf-wrap{position:relative;}
 .product-shelf{
@@ -637,6 +666,29 @@ section{padding:64px 0;}
 }
 .shelf-nav button:hover{background:var(--paper-alt);}
 
+/* Floating WhatsApp button */
+.whatsapp-float{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  z-index:1000;
+  transition:transform 0.15s ease;
+}
+.whatsapp-float:hover{transform:scale(1.07);}
+.whatsapp-float svg{width:30px;height:30px;}
+@media (max-width:520px){
+  .whatsapp-float{width:52px;height:52px;bottom:18px;right:18px;}
+  .whatsapp-float svg{width:26px;height:26px;}
+}
+
 @media (max-width:860px){
   .main-nav{
     position:absolute;
@@ -672,27 +724,4 @@ section{padding:64px 0;}
   .product-grid{grid-template-columns:1fr;}
   .factory-stats{grid-template-columns:repeat(2,1fr);}
   .cta-band .wrap{flex-direction:column;align-items:flex-start;}
-}
-
-/* Floating WhatsApp button */
-.whatsapp-float{
-  position:fixed;
-  bottom:24px;
-  right:24px;
-  width:58px;
-  height:58px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 14px rgba(0,0,0,0.25);
-  z-index:1000;
-  transition:transform 0.15s ease;
-}
-.whatsapp-float:hover{transform:scale(1.07);}
-.whatsapp-float svg{width:30px;height:30px;}
-@media (max-width:520px){
-  .whatsapp-float{width:52px;height:52px;bottom:18px;right:18px;}
-  .whatsapp-float svg{width:26px;height:26px;}
 }
