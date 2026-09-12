@@ -240,6 +240,13 @@ section{padding:64px 0;}
   display:flex;
   flex-direction:column;
   gap:10px;
+  cursor:pointer;
+  transition:border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.product-card:hover{
+  border-color:var(--teal);
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(11,107,92,0.12);
 }
 .product-card .icon-wrap{
   width:44px;height:44px;
@@ -665,4 +672,27 @@ section{padding:64px 0;}
   .product-grid{grid-template-columns:1fr;}
   .factory-stats{grid-template-columns:repeat(2,1fr);}
   .cta-band .wrap{flex-direction:column;align-items:flex-start;}
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  z-index:1000;
+  transition:transform 0.15s ease;
+}
+.whatsapp-float:hover{transform:scale(1.07);}
+.whatsapp-float svg{width:30px;height:30px;}
+@media (max-width:520px){
+  .whatsapp-float{width:52px;height:52px;bottom:18px;right:18px;}
+  .whatsapp-float svg{width:26px;height:26px;}
 }

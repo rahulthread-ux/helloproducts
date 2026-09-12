@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var list = limit ? PRODUCTS.slice(0, limit) : PRODUCTS;
 
   list.forEach(function (product) {
-    var card = document.createElement('div');
+    var card = document.createElement('a');
     card.className = 'product-card';
+    card.href = 'product-detail.html?id=' + encodeURIComponent(product.id);
 
     if (product.image) {
       var photoWrap = document.createElement('div');
@@ -54,11 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
       card.appendChild(groupEl);
     });
 
-    var link = document.createElement('a');
-    link.className = 'enquire-link';
-    link.href = 'product-detail.html?id=' + encodeURIComponent(product.id);
-    link.textContent = 'View details';
-    card.appendChild(link);
+var link = document.createElement('span');
+link.className = 'enquire-link';
+link.textContent = 'View details';
+card.appendChild(link);
 
     grid.appendChild(card);
   });
